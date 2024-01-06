@@ -2,7 +2,7 @@
 CROSS_COMPILE = riscv64-unknown-elf-
 // CFLAGS用C編譯 ; CXXFLAGS用C++編譯 
   // -nostdlib 不連接系統標準啟動文件和標準函式庫，把指定文件傳給連接器
-  // -fno-builtin (表示不使用C语言的内建函数)不接受不是兩個下劃線開頭的內建函數 (__)
+  // -fno-builtin (表示不使用C语言的内建函数)不接受是以兩個下劃線開頭的內建函數 (__)
 CFLAGS = -nostdlib -fno-builtin -march=rv32imazicsr -mabi=ilp32 -g -Wall
 
 QEMU = qemu-system-riscv32
